@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Jarvis Test Upload</title></head>
+<body>
+  <input id="file" type="file" aria-label="File" />
+  <p id="out">none</p>
+  <script>
+    document.getElementById("file").addEventListener("change", function () {
+      var f = this.files[0];
+      document.getElementById("out").textContent = f ? "selected " + f.name : "none";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Jarvis Test Select</title></head>
+<body>
+  <select id="c" aria-label="Color">
+    <option value="red">red</option>
+    <option value="blue">blue</option>
+    <option value="green">green</option>
+  </select>
+  <p id="out">none</p>
+  <script>
+    document.getElementById("c").addEventListener("change", function () {
+      document.getElementById("out").textContent = document.getElementById("c").value;
+    });
+  </script>
+</body>
+</html>

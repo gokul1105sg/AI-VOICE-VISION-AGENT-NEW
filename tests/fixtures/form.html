@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Jarvis Test Form</title></head>
+<body>
+  <form id="f">
+    <input name="email" aria-label="Email" type="email" />
+    <button type="submit">Subscribe</button>
+  </form>
+  <p id="out">none</p>
+  <script>
+    document.getElementById("f").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("out").textContent =
+        "submitted " + document.querySelector("input").value;
+    });
+  </script>
+</body>
+</html>
